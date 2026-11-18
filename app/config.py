@@ -19,3 +19,8 @@ FALLBACKS = [m.strip() for m in os.getenv(
 TOP_K = int(os.getenv("TOP_K", "6"))
 MIN_SCORE = float(os.getenv("MIN_SCORE", "0.40"))   # cosine; tune after testing
 RATE_PER_MIN = int(os.getenv("RATE_PER_MIN", "20"))
+
+CACHE_TTL = int(os.getenv("CACHE_TTL", "3600"))
+CACHE_MAX = int(os.getenv("CACHE_MAX", "300"))
+FIRST_TOKEN_TIMEOUT = float(os.getenv("FIRST_TOKEN_TIMEOUT", "6"))
+CHUNK_CHARS = int(os.getenv("CHUNK_CHARS", "900"))
