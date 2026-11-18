@@ -2,7 +2,7 @@
 
 A retrieval-augmented (RAG) chatbot that answers questions about **DAR Global** and **Wasalt** using data scraped from their public websites. Containerised with Docker and deployed on Render.
 
-**Live demo:** https://YOUR-SERVICE.onrender.com
+**Live demo:** [https://YOUR-SERVICE.onrender.com](https://darglobal-chatbot-1.onrender.com/)
 *(Free tier: if the app has been idle, the first request can take about a minute while it wakes up.)*
 
 ## How it works
