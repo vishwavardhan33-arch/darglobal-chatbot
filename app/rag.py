@@ -88,7 +88,7 @@ async def stream_model(client, model, messages):
     async with client.stream("POST", f"{C.OPENROUTER_URL}/chat/completions",
             timeout=httpx.Timeout(30, read=25),
             headers={"Authorization": f"Bearer {C.API_KEY}", "X-Title": "DarGlobal-Wasalt Chatbot"},
-            json={"model": model, "messages": messages, "temperature": 0.2, "max_tokens": 900, "stream": True}) as r:
+            json={"model": model, "messages": messages, "temperature": 0.2, "max_tokens": 350, "stream": True}) as r:
         if r.status_code != 200:
             raise RuntimeError(f"{model}: HTTP {r.status_code}")
         got = False
