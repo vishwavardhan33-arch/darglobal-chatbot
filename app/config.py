@@ -10,10 +10,10 @@ EMBED_CACHE = os.getenv("FASTEMBED_CACHE", str(ROOT / ".cache" / "fastembed"))
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1"
 API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-MODEL = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free")
+MODEL = os.getenv("OPENROUTER_MODEL", "nvidia/nemotron-3-ultra-550b-a55b:free")
 FALLBACKS = [m.strip() for m in os.getenv(
     "OPENROUTER_FALLBACK_MODELS",
-    "google/gemma-3-27b-it:free,mistralai/mistral-small-3.2-24b-instruct:free",
+    "nvidia/nemotron-3.5-lightning:free,dots-studio/dots-3-note-preview:free,nvidia/nemotron-3.5-super-vl:free",
 ).split(",") if m.strip()]
 
 TOP_K = int(os.getenv("TOP_K", "4"))
